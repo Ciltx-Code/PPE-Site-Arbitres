@@ -1,0 +1,461 @@
+/*==========Polices==========*/
+@font-face{
+  font-family: "Evolve";
+  src:url('fonts/Evolve.otf');
+}
+
+@font-face{
+  font-family: "Sansation_Regular";
+  src: url('fonts/Sansation_Regular.ttf');
+}
+
+@font-face{
+  font-family: "LouisGeorgeCafe";
+  src: url('fonts/LouisGeorgeCafe.ttf');
+}
+/*=======================*/
+
+/*==========CSS==========*/
+
+body{
+  float: none;
+  font-family: Evolve;
+  margin:0;
+  padding: 0;
+  background-color: white;
+  background-size: 100%;
+  /*background-image: url('../images/Blur_Background.png');*/
+
+
+}
+
+.background{
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-size: inherit;
+  background-image: url('../images/Background.png');
+  background-repeat: repeat-y;
+  filter: blur(0px);
+  overflow: auto;
+}
+
+/*==========Entete==========*/
+.entete nav a, .entete nav p{
+  cursor: pointer;
+  text-decoration: none;
+  color:white;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 10%, rgba(255, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+  background-position: bottom -50px;
+  background-position: center;
+  transition: background-size 0.5s;
+  filter: blur(0px);
+}
+.entete nav a:hover, .entete nav p:hover{
+  background-size: 100% 100%;
+}
+
+nav ul li{
+  display: inline-block;
+  clear: both;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+nav{
+  margin:auto 10% auto auto;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.entete{
+  display: inline-flex;
+}
+.entete .logo{
+  width: 20%;
+}
+.entete .logo img{
+  width: 100%;
+}
+
+.dropbtn {
+  background: inherit;
+  border: none;
+  font-family: Evolve;
+  margin:0;
+  padding: 0;
+  background-size: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 1.15em;
+}
+.dropbtn:active, .dropbtn:focus{
+  outline-style: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.show {
+  display:block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-left: 33%;
+}
+#user:hover{
+  background-size: 100% 100%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom:1px solid black ;
+}
+
+.dropdown-content a:hover{
+  background-color: RGBa(236,236,236,0.2);
+}
+/*==========================*/
+
+/*==========Accueil=========*/
+
+.accueil{
+  text-align: center;
+  display: block;
+  left: 50%;
+  margin-top: 4%;
+  margin-bottom: 12%;
+  width: 40%;
+}
+.accueil p{
+  font-family: LouisGeorgeCafe;
+  font-size: 22px;
+  text-align: left;
+  margin-top: 20%;
+  margin-left: 20%;
+}
+.accueil h1{
+  font-family: Evolve;
+  text-align: left;
+  color: #592391;
+  margin-left: 25%;
+  font-size: 40px;
+  text-shadow:black 0.1px 0 2px;
+  width: 20%;
+
+}
+/*========================*/
+
+
+/*==========Pied==========*/
+.pied{
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 25%;
+  padding:5px;
+  border-radius: 50px;
+  vertical-align: bottom;
+  margin: 2% auto auto auto;
+  background: linear-gradient(to right, #C645BB, #4AA9FE);
+}
+
+/*==========Popup==========*/
+.login-popup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.popupForm{
+  filter: none;
+}
+
+.popupFormCategorieModifSuppr{
+  display: none;
+  position: fixed;
+  left: 49%;
+  top:15%;
+  transform: translate(-45%,5%);
+  filter: blur(0px);
+}
+
+.popupFormMatchModifSuppr{
+  display: none;
+  position: fixed;
+  left: 49%;
+  transform: translate(-45%,5%);
+  filter: blur(0px);
+}
+.btnmodifsuppr{
+  background: linear-gradient(to right, #C645BB, #4AA9FE);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 49%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.btnmodifsuppr:active, .btnmodifsuppr:focus{
+  outline-style: none;
+}
+
+.btnmodifsuppr:hover, .btnmodifsuppr:hover {
+  opacity: 1;
+}
+
+.popupFormMatchModifSuppr label{
+  margin-left: 10px;
+  margin-right: 10px;  
+}
+
+.popupFormCategorie{
+  display: none;
+  position: fixed;
+  left: 49%;
+  top:15%;
+  transform: translate(-45%,5%);
+  filter: blur(0px);
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 49%;
+  top:15%;
+  transform: translate(-45%,5%);
+  filter: blur(0px);
+}
+.form-container {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 50px;
+}
+.form-container input[type=text] {
+  width: 93%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #eee;
+}
+.form-container input[type=email] {
+  width: 93%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #eee;
+}
+.form-container input[type=password]{
+  width: 93%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #eee;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus, .form-container input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background: linear-gradient(to right, #C645BB, #4AA9FE);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .btn:active, .btn:focus{
+  outline-style: none;
+}
+.form-container .cancel {
+  background-color: #cc0000;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.popupFormMatch{
+  display: none;
+  position: fixed;
+  left: 49%;
+  transform: translate(-45%,5%);
+  filter: blur(0px);
+}
+.popupFormMatch label{
+  margin-left: 10px;
+  margin-right: 10px;  
+}
+.liste1{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*=============================*/
+
+/*==========Arbitres==========*/
+.arbitres{
+  display: block;
+  margin: auto;
+  border-radius: 25% 25% 20% 20%;
+  padding:10px 15px 0 15px;
+  width: 60%;
+  background: linear-gradient(to bottom right, #C645BB, #4AA9FE);
+}
+
+/*==========Categorie==========*/
+
+.button_categorie{
+  display: block;
+  margin:auto;
+  text-align: center;
+  padding-bottom: 15px;
+
+}
+.button_categorie .btn {
+  width: 25%;
+  opacity: 0.8;
+  font-family: LouisGeorgeCafe;
+  background: linear-gradient(to right, #C645BB, #4AA9FE);
+  color: #fff;
+  padding: 12px 7px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom:10px;
+  margin-right: 20px;
+  margin-top: 7%;
+
+}
+.button_categorie .btn:active, .btn:focus{
+  outline-style: none;
+}
+.button_categorie .cancel {
+  background-color: #cc0000;
+}
+.button_categorie .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.categorie{
+  display: block;
+  margin: auto;
+  height: auto;
+  border-radius: 10% 10% 10% 10%;
+  padding:10px 15px 0 15px;
+  width: 30%;
+  background: linear-gradient(to bottom right, #C645BB, #4AA9FE);
+}
+#table_categorie{
+  filter: blur(0px);
+}
+
+.table_categorie{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.table_categorie table{
+  margin-bottom: 25px;
+  text-align: center;
+  color: black;
+  border-collapse: collapse;
+}
+
+.table_categorie tr{
+
+  min-height: 50px;
+}
+
+.table_categorie td{
+  padding: 7px;
+  border:2px solid #2B1367;
+}
+#blur{
+  filter: blur(0px);
+}
+#blur2{
+  filter: blur(0px);
+}
+#blur2{
+  filter: blur(0px);
+}
+/*=============================*/
+
+.lienInscription a{
+  color:black;
+}
+.ConfirmInscription{
+  text-align: center;
+  margin: auto;
+  background-color: white;
+  border-radius: 50px;
+}
+.ConfirmInscription p{
+  font-size: 1.25em;
+  margin-top: -5% ;
+}
+.ConfirmInscription a{
+  color:black;
+}
+.inscription{
+  display: flex;
+  width: 30%;
+  margin: 5% auto 5% auto ;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 50px;
+}
+.inscriptionForm fieldset{
+  border: none;
+}
+.inscriptionForm{
+  text-align: center;
+  margin: auto;
+
+}
+
+.inscriptionForm input[type=text], .inscriptionForm input[type=email], .inscriptionForm input[type=password], .inscriptionForm input[type=date]{
+  width: 93%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  border: none;
+  background: #eee;
+}
+
+.inscriptionForm input[type=text]:focus, .inscriptionForm input[type=email]:focus, .inscriptionForm input[type=password]:focus, .inscriptionForm input[type=date]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+.boutonInscription{
+  background: linear-gradient(to right, #C645BB, #4AA9FE);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.boutonInscription{
+  outline-style: none;
+}
